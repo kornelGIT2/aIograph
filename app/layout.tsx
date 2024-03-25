@@ -17,7 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        variables: { colorPrimary: "green" },
+      }}
+    >
       <html lang="en">
         <body className={inter.className}>
           <ThemeProvider
@@ -26,7 +30,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <main>{children}</main>
           </ThemeProvider>
         </body>
       </html>

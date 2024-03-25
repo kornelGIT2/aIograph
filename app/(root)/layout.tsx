@@ -1,4 +1,5 @@
 import { Sidebar } from "@/components/sidebar";
+import { Mobilenav } from "@/components/mobilenav";
 
 export default function RootLayout({
   children,
@@ -8,8 +9,9 @@ export default function RootLayout({
   return (
     <main className="root">
       <Sidebar />
+      <Mobilenav />
       <div className="root-container">
-        <div className="wrapper">{children}</div>
+        <div className="wrapper mt-20">{children}</div>
       </div>
     </main>
   );
