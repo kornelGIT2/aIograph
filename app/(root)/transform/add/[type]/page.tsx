@@ -24,6 +24,7 @@ const AddTransformation = async ({ params: { type } }: SearchParamProps) => {
         action={"ADD"}
         userId={user._id}
         type={transformationType.type}
+        creditBalance={10}
       />
     </>
   );
