@@ -4,33 +4,35 @@ export const links: Link[] = [
   {
     name: "Home",
     route: "/",
-    icon: null,
+    icon: "/home.svg",
+  },
+
+  {
+    name: "Background Removal",
+    route: "/transform/add/background_remove",
+    icon: "/remove_back.svg",
   },
   {
-    name: "Image Restore",
-    route: "/image_restore",
-    icon: null,
+    name: "Object Removal",
+    route: "/transform/add/object_remove",
+    icon: "/remove_photo.svg",
   },
   {
     name: "Gernerative Fill",
-    route: "/generative_fill",
-    icon: null,
-  },
-  {
-    name: "Object Remove",
-    route: "/object_remove",
-    icon: null,
+    route: "/transform/add/generative_fill",
+    icon: "/fill_buck.svg",
   },
   {
     name: "Object Recolor",
-    route: "/object_recolor",
-    icon: null,
+    route: "/transform/add/object_recolor",
+    icon: "/color_pal.svg",
   },
   {
-    name: "Background Remove",
-    route: "/background_remove",
-    icon: null,
+    name: "Image Restoration",
+    route: "/transform/add/image_restore",
+    icon: "/image_rest.svg",
   },
+
   {
     name: "Profile",
     route: "/profile",
@@ -117,28 +119,28 @@ export const plans = [
 ];
 
 export const transformationTypes = {
-  restore: {
+  image_restore: {
     type: "restore",
     title: "Restore Image",
     subTitle: "Refine images by removing noise and imperfections",
     config: { restore: true },
     icon: "image.svg",
   },
-  removeBackground: {
+  background_remove: {
     type: "removeBackground",
     title: "Background Remove",
     subTitle: "Removes the background of the image using AI",
     config: { removeBackground: true },
     icon: "camera.svg",
   },
-  fill: {
+  generative_fill: {
     type: "fill",
     title: "Generative Fill",
     subTitle: "Enhance an image's dimensions using AI outpainting",
     config: { fillBackground: true },
     icon: "stars.svg",
   },
-  remove: {
+  object_remove: {
     type: "remove",
     title: "Object Remove",
     subTitle: "Identify and eliminate objects from images",
@@ -147,7 +149,7 @@ export const transformationTypes = {
     },
     icon: "scan.svg",
   },
-  recolor: {
+  object_recolor: {
     type: "recolor",
     title: "Object Recolor",
     subTitle: "Identify and recolor objects from the image",
@@ -167,7 +169,7 @@ export const aspectRatioOptions = {
   },
   "3:4": {
     aspectRatio: "3:4",
-    label: "Standard Portrait (3:4)",
+    label: "Portrait (3:4)",
     width: 1000,
     height: 1334,
   },

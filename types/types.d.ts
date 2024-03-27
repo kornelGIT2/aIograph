@@ -95,11 +95,11 @@ declare type CreateTransactionParams = {
 };
 
 declare type TransformationTypeKey =
-  | "restore"
-  | "fill"
-  | "remove"
-  | "recolor"
-  | "removeBackground";
+  | "image_restore"
+  | "generative_fill"
+  | "background_remove"
+  | "object_recolor"
+  | "object_remove";
 
 // ====== URL QUERY PARAMS
 declare type FormUrlQueryParams = {

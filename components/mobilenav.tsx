@@ -1,19 +1,20 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
-import { UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { SheetMobile } from "./sheet";
+import Image from "next/image";
 
 export const Mobilenav = () => {
   return (
-    <nav className="bg-white h-20 shadow-md fixed w-full grid grid-cols-2  dark:bg-slate-900">
-      <div className="flex  justify-start items-center ml-4 gap-4">
+    <nav className="bg-white h-20 shadow-md dark:border-b dark:border-secondary fixed w-full grid grid-cols-2  dark:bg-slate-950">
+      <div className="flex  justify-start items-center ml-6 gap-4">
         <Link
           className="hidden lg:inline-block bg-primary text-transparent bg-clip-text text-3xl font-bold tracking-tight"
           href="/"
         >
-          AI*ograph
+          AIograph
         </Link>{" "}
         <SheetMobile>
           <svg
@@ -33,8 +34,31 @@ export const Mobilenav = () => {
           </svg>
         </SheetMobile>
       </div>
-      <div className="flex justify-end items-center gap-4 mr-4">
-        <ModeToggle />
+      <div className="flex justify-end items-center gap-6 mr-6 ">
+        <SignedOut>
+          <Link className="bg-transparent hover:text-slate-500" href="/sign-in">
+            Sign in
+          </Link>
+          <Button asChild className="rounded-3xl">
+            <Link
+              className="flex justify-center items-center gap-1 text-slate-50"
+              href="/sign-up"
+            >
+              Get Started
+              <Image
+                src="/arrow.svg"
+                alt="arrow"
+                height={24}
+                width={24}
+                className="invert"
+              />
+            </Link>
+          </Button>
+        </SignedOut>
+        <SignedIn>
+          <ModeToggle />
+        </SignedIn>
+
         <UserButton afterSignOutUrl="/" />
       </div>
     </nav>
