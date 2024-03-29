@@ -16,8 +16,8 @@ export default function RootLayout({
       </SignedIn>
       <Mobilenav />
 
-      <div className="root-container dark:bg-slate-950 bg-slate-100 flex flex-col ">
-        <div className="wrapper mt-32">{children}</div>
+      <div className="root-container dark:bg-slate-950 bg-slate-100 flex flex-col">
+        <div className="wrapper lg:mt-20">{children}</div>
         <SignedOut>
           <Footer />
         </SignedOut>

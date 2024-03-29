@@ -5,7 +5,7 @@ const Home = async () => {
   const user = await currentUser();
   if (!user) return <HeroPage />;
   return (
-    <main className=" dark:text-white text-6xl font-bold text-primary">
+    <main className="mt-32 dark:text-white text-6xl font-bold text-primary">
       Home page
     </main>
   );
