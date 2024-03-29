@@ -10,13 +10,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="root ">
+    <main className="root">
       <SignedIn>
         <Sidebar />
       </SignedIn>
       <Mobilenav />
-      <div className="root-container dark:bg-slate-950 bg-slate-100">
-        <div className="wrapper lg:mt-20 mt-4">{children}</div>
+
+      <div className="root-container dark:bg-slate-950 bg-slate-100 flex flex-col ">
+        <div className="wrapper mt-32">{children}</div>
         <SignedOut>
           <Footer />
         </SignedOut>

@@ -4,11 +4,12 @@ import { heroImages } from "@/const";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import Footer from "../footer/footer";
 
 function HeroPage() {
   const router = useRouter();
   return (
-    <main className=" flex justify-center items-center">
+    <main className=" flex justify-center items-center ">
       <section
         className="relative flex place-items-center before:absolute before:h-[300px]
        before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial
