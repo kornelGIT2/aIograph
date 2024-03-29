@@ -8,6 +8,7 @@ import { redirect } from "next/navigation";
 
 const AddTransformation = async ({ params: { type } }: SearchParamProps) => {
   const transformationType = transformationTypes[type];
+
   const { userId } = auth();
 
   if (!userId) redirect("/sign-in");
@@ -24,7 +25,8 @@ const AddTransformation = async ({ params: { type } }: SearchParamProps) => {
         action={"ADD"}
         userId={user._id}
         type={transformationType.type}
-        creditBalance={10}
+        creditBalance={user.creditBalance}
+        data={null}
       />
     </>
   );

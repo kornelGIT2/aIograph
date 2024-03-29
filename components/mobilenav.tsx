@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const Mobilenav = () => {
   return (
-    <nav className="bg-white h-20 shadow-md dark:border-b dark:border-secondary fixed w-full grid grid-cols-2  dark:bg-slate-950">
+    <nav className="bg-white dark:text-white h-20 shadow-sm dark:border-b dark:border-secondary fixed w-full grid grid-cols-2 z-[1] dark:bg-slate-950">
       <div className="flex  justify-start items-center ml-6 gap-4">
         <Link
           className="hidden lg:inline-block bg-primary text-transparent bg-clip-text text-3xl font-bold tracking-tight"
@@ -34,7 +34,7 @@ export const Mobilenav = () => {
           </svg>
         </SheetMobile>
       </div>
-      <div className="flex justify-end items-center gap-6 mr-6 ">
+      <div className="flex justify-end items-center gap-6">
         <SignedOut>
           <Link className="bg-transparent hover:text-slate-500" href="/sign-in">
             Sign in
@@ -48,18 +48,20 @@ export const Mobilenav = () => {
               <Image
                 src="/arrow.svg"
                 alt="arrow"
-                height={24}
-                width={24}
+                height={20}
+                width={20}
                 className="invert"
               />
             </Link>
           </Button>
         </SignedOut>
-        <SignedIn>
-          <ModeToggle />
-        </SignedIn>
+        <div className="flex justify-center items-center mr-4 gap-6">
+          <SignedIn>
+            <ModeToggle />
+          </SignedIn>
 
-        <UserButton afterSignOutUrl="/" />
+          <UserButton afterSignOutUrl="/" />
+        </div>
       </div>
     </nav>
   );

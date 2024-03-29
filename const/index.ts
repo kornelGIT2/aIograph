@@ -20,7 +20,7 @@ export const links: Link[] = [
   {
     name: "Gernerative Fill",
     route: "/transform/add/generative_fill",
-    icon: "/fill_buck.svg",
+    icon: "/fill2.svg",
   },
   {
     name: "Object Recolor",
@@ -38,6 +38,13 @@ export const links: Link[] = [
     route: "/profile",
     icon: null,
   },
+];
+
+export const heroImages = [
+  { id: 1, name: "/pexel1.jpg" },
+  { id: 2, name: "/pexel2.jpg" },
+  { id: 3, name: "/pexel3.jpg" },
+  { id: 4, name: "/pexel4.jpg" },
 ];
 
 export const plans = [
@@ -120,43 +127,38 @@ export const plans = [
 
 export const transformationTypes = {
   image_restore: {
-    type: "restore",
-    title: "Restore Image",
+    type: "image_restore",
+    title: "Image Restoration",
     subTitle: "Refine images by removing noise and imperfections",
     config: { restore: true },
-    icon: "image.svg",
   },
   background_remove: {
-    type: "removeBackground",
-    title: "Background Remove",
-    subTitle: "Removes the background of the image using AI",
+    type: "background_remove",
+    title: "Background Removal",
+    subTitle: "Removes the background of the image",
     config: { removeBackground: true },
-    icon: "camera.svg",
   },
   generative_fill: {
-    type: "fill",
+    type: "generative_fill",
     title: "Generative Fill",
-    subTitle: "Enhance an image's dimensions using AI outpainting",
+    subTitle: "Enhance an image's dimensions",
     config: { fillBackground: true },
-    icon: "stars.svg",
   },
   object_remove: {
-    type: "remove",
-    title: "Object Remove",
+    type: "object_remove",
+    title: "Object Removal",
     subTitle: "Identify and eliminate objects from images",
     config: {
       remove: { prompt: "", removeShadow: true, multiple: true },
     },
-    icon: "scan.svg",
   },
   object_recolor: {
-    type: "recolor",
+    type: "object_recolor",
     title: "Object Recolor",
     subTitle: "Identify and recolor objects from the image",
     config: {
       recolor: { prompt: "", to: "", multiple: true },
     },
-    icon: "filter.svg",
   },
 };
 

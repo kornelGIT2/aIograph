@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
-        variables: { colorPrimary: "green" },
+        variables: { colorPrimary: "blue" },
       }}
     >
       <html lang="en">

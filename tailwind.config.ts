@@ -18,6 +18,15 @@ const config = {
       },
     },
     extend: {
+      // Rozszerz filtr, jeśli chcesz zastosować dodatkowe efekty
+      filter: {
+        none: "none",
+        glow: "blur(8px)",
+      },
+      backdropFilter: {
+        none: "none",
+        glow: "blur(15px)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -72,6 +81,11 @@ const config = {
       backgroundImage: {
         "purple-gradient": "url('/assets/images/gradient-bg.svg')",
         banner: "url('/assets/images/banner-bg.png')",
+        "glow-effect":
+          "radial-gradient(circle, rgba(255,255,0,0.6) 30%, rgba(255,0,0,0.6) 60%, rgba(0,0,255,0.6))",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       borderRadius: {
         lg: "var(--radius)",

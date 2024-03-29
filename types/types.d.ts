@@ -4,8 +4,6 @@ export type Link = {
   icon?: string | null;
 };
 
-/* eslint-disable no-unused-vars */
-
 // ====== USER PARAMS
 declare type CreateUserParams = {
   clerkId: string;
